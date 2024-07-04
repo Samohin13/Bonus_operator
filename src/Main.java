@@ -1,19 +1,25 @@
 public class Main {
     public static void main(String[] args) {
 
-        int initialBalance = 100; // Начальный баланс
+        int initialBalance = 100;            // Начальный баланс
+        int topUpAmount = 700;              // Сумма пополнения
 
-        // Сумма пополнения
-        int topUpAmount = 1100; // Сумма пополнения
-        int bonus = 11; // 1 рубль за каждые 100 рублей при пополнение свыше 1000
+        int bonus = topUpAmount / initialBalance;
 
-        // Итоговая сумма на счету клиента
         int finalBalance = initialBalance + topUpAmount + bonus;
+        int Balance = initialBalance + topUpAmount;
 
-        System.out.println("Начальная сумма на счету: " + initialBalance + " рублей");
-        System.out.println("Сумма пополнения: " + topUpAmount + " рублей");
-        System.out.println("Бонусные рубли: " + bonus + " рублей");
-        System.out.println("Итоговая сумма на счету: " + finalBalance + " рублей");
+        if (topUpAmount >= 1100) {
+            System.out.println("Итоговая сумма на счету:" + finalBalance + " рублей ");
+        } else {
+            System.out.println("Итоговая сумма на счету:"+ Balance +" рублей ");
+        }
+
+        //int finalBalance = initialBalance + topUpAmount + bonus;
+        //System.out.println("Начальная сумма на счету: " + initialBalance + " рублей");
+        //System.out.println("Сумма пополнения: " + topUpAmount + " рублей");
+        //System.out.println("Бонусные рубли: " + bonus + " рублей");
+        //System.out.println("Итоговая сумма на счету: " + finalBalance + " рублей");
     }
 
 }
